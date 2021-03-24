@@ -15,8 +15,19 @@ if ($_SESSION["loggedIn"] != "admin") {
 </head>
 <body>
     <h1>Welcome to Crimson Path admin area</h1>
+    <a href="index.html">Home</a><br>
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae rem atque doloremque explicabo totam debitis voluptatibus velit. Et atque corporis totam? Illum culpa consequatur non aliquam neque quidem harum praesentium!</p>
     <br>
+    <form action="upload.php" method="post" enctype="multipart/form-data">
+        Select text to upload:
+        <input type="file" name="textToUpload" id="textToUpload">
+        <br>
+        Select pdf to upload:
+        <input type="file" name="pdfToUpload" id="pdfToUpload">
+        <br>
+        <input type="submit" value="Upload Text and PDF" name="submit">
+    </form>
+    <hr>
     <a href="logout.php">Logout</a>
 </body>
 </html>
