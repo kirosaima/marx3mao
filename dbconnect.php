@@ -2,7 +2,7 @@
 // TODO
 // complete credentials
 $servername = "localhost";
-$username = "";
-$password = "";
-$database = "";
+$username = "crimsonpath";
+$password = "tLed08?2";
+$database = "crimsonpath";
 ?>
