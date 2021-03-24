@@ -19,11 +19,8 @@ if ($_SESSION["loggedIn"] != "admin") {
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae rem atque doloremque explicabo totam debitis voluptatibus velit. Et atque corporis totam? Illum culpa consequatur non aliquam neque quidem harum praesentium!</p>
     <br>
     <form action="upload.php" method="post" enctype="multipart/form-data">
-        Select text to upload:
-        <input type="file" name="textToUpload" id="textToUpload">
-        <br>
-        Select pdf to upload:
-        <input type="file" name="pdfToUpload" id="pdfToUpload">
+        Select files to upload:
+        <input type="file" name="textToUpload[]" id="textToUpload" multiple>
         <br>
         <input type="submit" value="Upload Text and PDF" name="submit">
     </form>
