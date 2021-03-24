@@ -28,7 +28,7 @@ if ($pdfFileType != "pdf") {
 if ($uploadOk == 0) {
     echo "Sorry, your files were not uploaded.";
 } else {
-    if (move_uploaded_file($_FILES["textToUpload"]["tmp_name"],$target_text) && move_uploaded_files($_FILES["pdfToUpload"]["tmp_name"],$taget_file)) {
+    if (move_uploaded_file($_FILES["textToUpload"]["tmp_name"],$target_text) && move_uploaded_file($_FILES["pdfToUpload"]["tmp_name"],$taget_file)) {
         echo "The files ". htmlspecialchars( basename($_FILES["textToUpload"]["name]"])) . " and ". htmlspecialchars(basename($_FILES["pdfToUpload"]["name"])) . " have been uploaded.";
     } else {
         echo "Sorry, there was an error uploading your files.";
