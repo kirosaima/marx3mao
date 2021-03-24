@@ -22,7 +22,7 @@ if ($textFileType != "html" && $textFileType != "htm") {
 }
 if ($pdfFileType != "pdf") {
     echo "Sorry, only PDF files are allowed for pdf upload.";
-    $uploadOk = 0
+    $uploadOk = 0;
 }
 
 if ($uploadOk == 0) {
