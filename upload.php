@@ -17,7 +17,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                 move_uploaded_file($_FILES['textToUpload']['tmp_name'][$i], $target_dir.$filename);
 
                     $filetype = pathinfo($filename)['extension'];
-                    $sql = $conn->prepare("INSERT INTO search_titles (title, filetype) VALUES ('$filename', '$filetype')");
+                    $sql = $conn->prepare("INSERT INTO search_titles (title, filetype) VALUES (:ffilename, :filetype)");
+                    $sql->bindParam(":ffilename", $filename);
+                    $sql->bindParam(":filetype", $filetype);
                     $sql->execute();
                     echo "Success";
                 }

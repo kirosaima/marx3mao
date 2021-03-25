@@ -16,7 +16,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         }
         else {
             echo "File has been deleted";
-            $sql = $conn->prepare("DELETE FROM search_titles WHERE title = '$file'");
+            $sql = $conn->prepare("DELETE FROM search_titles WHERE title = :ffile");
+            $sql->bindParam(":ffile", $file);
             $sql->execute();
             echo "\nSuccess!";
         }

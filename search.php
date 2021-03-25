@@ -8,7 +8,10 @@
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $searchQuery = htmlspecialchars($_POST['search_value']);
             $searchType = $_POST['searchType'];
-            $sql = $conn->prepare("SELECT title FROM `search_titles` WHERE title LIKE '%{$searchQuery}%' AND filetype = '$searchType'");
+            $sql = $conn->prepare("SELECT title FROM `search_titles` WHERE title LIKE :query AND filetype = :stype");
+            $searchQuery = '%$searchQuery%';
+            $sql->bindParam(":query", $searchQuery);
+            $sql->bindParam(":stype", $searchType);
             $sql->execute();
             $results = $sql->fetchAll();
             }

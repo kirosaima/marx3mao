@@ -21,18 +21,26 @@ session_start();
                 // set PDO error mode to exception
                 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-                $userID = (htmlspecialchars($_POST['userID']));
-                $userPassword = (htmlspecialchars($_POST['userPassword']));
+                $userID = htmlspecialchars($_POST['userID']);
+                $userPassword = htmlspecialchars($_POST['userPassword']);
 
                 // search for user in users table
-                $sql = $conn->prepare("SELECT * FROM `users` WHERE `user_ID` = ':userID' AND `user_password` = ':userPassword'");
-                $sql->bindParam(":userID", $userID);
-                $sql->bindParam(":userPassword", $userPassword);
+                $sql = $conn->prepare("SELECT user_ID, user_password FROM users");
 
                 $sql->execute(); // execute the statement
+                $users = $sql->fetchAll();
 
-                if(gettype($sql->rowCount()) != 'boolean') { // check if we have results by seeing if there are rows
-                    $_SESSION["loggedIn"] = "admin";
+                foreach($users as $user) {
+                    if ($userID !== $user['user_ID']) {
+                        continue;
+                    }
+                    if ($userPassword == $user['user_password']) {
+                        $_SESSION["loggedIn"] = "admin";
+                    }
+                    continue;
+                }
+
+                if($_SESSION["loggedIn"] == "admin") { // check if we have results by seeing if there are rows
                     header("Location: https://bh55zl.uoswebspace.co.uk/crimsonpath/admin.php");
                     exit();
                 }
