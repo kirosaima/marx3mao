@@ -4,7 +4,9 @@
 
     use mikehaertl\tmp\File;
 
-    $filename = $_FILES['md']['name'];
+    $path_parts = pathinfo($_FILES['md']['name']);
+
+    $filename = $path_parts['filename'];
     $Parsedown = new Parsedown();
     $fileContents = file_get_contents($_FILES['md']['tmp_name']);
     $html = $Parsedown
