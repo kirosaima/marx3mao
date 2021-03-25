@@ -21,8 +21,8 @@ session_start();
                 // set PDO error mode to exception
                 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-                $userID = $_POST['userID'];
-                $userPassword = $_POST['userPassword'];
+                $userID = (htmlspecialchars($_POST['userID']));
+                $userPassword = (htmlspecialchars($_POST['userPassword']));
 
                 // search for user in users table
                 $sql = $conn->prepare("SELECT * FROM `users` WHERE `user_ID` = ':userID' AND `user_password` = ':userPassword'");

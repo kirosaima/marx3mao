@@ -27,8 +27,5 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         echo $e->getMessage();
         }
 }
-
-
-
 ?>
 

@@ -28,7 +28,7 @@ catch(PDOException $e)
 </head>
 <body>
     <h1>Welcome to Crimson Path admin area</h1>
-    <a href="index.html">Home</a><br>
+    <a href="index.php">Home</a><br>
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae rem atque doloremque explicabo totam debitis voluptatibus velit. Et atque corporis totam? Illum culpa consequatur non aliquam neque quidem harum praesentium!</p>
     <br>
     <hr>
