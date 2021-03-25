@@ -25,7 +25,7 @@ if ($_SESSION["loggedIn"] != "admin") {
         <input type="submit" value="Upload Text and PDF" name="submit">
     </form>
     <hr>
-    <a href="md-to-html.php"></a>
+    <a href="md-to-html.php">Markdown to HTML</a>
     <a href="logout.php">Logout</a>
 </body>
 </html>
