@@ -10,50 +10,48 @@
 <body>
     <ul>
         <?php
-function getFileList($dir)
-{
-  // array to hold return value
-  $retval = [];
+            function getFileList($dir)
+            {
+            // array to hold return value
+            $retval = [];
 
-  // add trailing slash if missing
-  if(substr($dir, -1) != "/") {
-    $dir .= "/";
-  }
+            // add trailing slash if missing
+            if(substr($dir, -1) != "/") {
+                $dir .= "/";
+            }
 
-  // open pointer to directory and read list of files
-  $d = @dir($dir) or die("getFileList: Failed opening directory {$dir} for reading");
-  while(FALSE !== ($entry = $d->read())) {
-    // skip hidden files
-    if($entry{0} == ".") continue;
-    if(is_dir("{$dir}{$entry}")) {
-      $retval[] = [
-        'name' => "{$dir}{$entry}/",
-        'type' => filetype("{$dir}{$entry}"),
-        'size' => 0,
-        'lastmod' => filemtime("{$dir}{$entry}")
-      ];
-    } elseif(is_readable("{$dir}{$entry}")) {
-      $retval[] = [
-        'name' => "{$dir}{$entry}",
-        'type' => mime_content_type("{$dir}{$entry}"),
-        'size' => filesize("{$dir}{$entry}"),
-        'lastmod' => filemtime("{$dir}{$entry}")
-      ];
-    }
-  }
-  $d->close();
+            // open pointer to directory and read list of files
+            $d = @dir($dir) or die("getFileList: Failed opening directory {$dir} for reading");
+            while(FALSE !== ($entry = $d->read())) {
+                // skip hidden files
+                if($entry{0} == ".") continue;
+                if(is_dir("{$dir}{$entry}")) {
+                $retval[] = [
+                    'name' => "{$dir}{$entry}/",
+                    'type' => filetype("{$dir}{$entry}"),
+                    'size' => 0,
+                    'lastmod' => filemtime("{$dir}{$entry}")
+                ];
+                } elseif(is_readable("{$dir}{$entry}")) {
+                $retval[] = [
+                    'name' => "{$dir}{$entry}",
+                    'type' => mime_content_type("{$dir}{$entry}"),
+                    'size' => filesize("{$dir}{$entry}"),
+                    'lastmod' => filemtime("{$dir}{$entry}")
+                ];
+                }
+            }
+            $d->close();
 
-  return $retval;
-}
-$dirlist = getFileList("articles/");
-foreach ($dirlist as $file) {
-    if($file['type'] != 'text/plain') {
-        continue;
-    }
-    echo "<li><a href=\"articles/",basename($file['name']),"\">",basename($file['name']), "</a></li>\n";
-    //echo $file['name'] . "\n";
-    //echo $file['type'] . "\n";
-}
+            return $retval;
+            }
+            $dirlist = getFileList("articles/");
+            foreach ($dirlist as $file) {
+                if($file['type'] != 'text/plain') {
+                    continue;
+                }
+                echo "<li><a href=\"articles/",basename($file['name']),"\">",substr_replace(basename($file['name']),"",-5), "</a></li>\n";
+            }
         ?>
     </ul>
 </body>
