@@ -7,11 +7,9 @@
             // set PDO error mode to exception
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $searchQuery = htmlspecialchars($_POST['search_value']);
-            $searchType = $_POST['searchType'];
-            $sql = $conn->prepare("SELECT title FROM `search_titles` WHERE title LIKE :query AND filetype = :stype");
+            $sql = $conn->prepare("SELECT title, category FROM `search_titles` WHERE title LIKE :query");
             $searchQuery = '%$searchQuery%';
             $sql->bindParam(":query", $searchQuery);
-            $sql->bindParam(":stype", $searchType);
             $sql->execute();
             $results = $sql->fetchAll();
             }
@@ -31,10 +29,26 @@
     <title>Search</title>
 </head>
 <body>
+<div class="navbar">
+        <ul>
+            <a href="index.php">HOME</a>
+            <a href="textlist.php">TEXTS</a>
+            <a href="news.php">NEWS</a>
+            <a href="contact.php">CONTACT</a>
+            <a href="about.html">ABOUT</a></li>    
+            <form action="search.php" method="post">
+                <input type="text" name="search_value" id="search_value">
+                <input type="submit" value="" style="background:url('images/Search-Icon.png');background-size:cover;border:none;color: transparent;">
+            </form>
+                
+        </ul>
+    </div>
+    <div class="main-body">
     <ul>
         <?php foreach($results as $result): ?>
-            <li><a href="articles/<?= $result['title']; ?>"><?= pathinfo($result['title'])['filename']; ?></a></li>
+            <li><a href="articles/<?=$result['category'];?>/<?= $result['title']; ?>"><?= pathinfo($result['title'])['filename']; ?></a></li>
         <?php endforeach; ?>
     </ul>
+        </div>
 </body>
 </html>

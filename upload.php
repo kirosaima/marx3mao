@@ -12,14 +12,16 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $target_dir = "articles/";
         if(isset($_POST['submit'])) {
             $countfiles = count($_FILES['textToUpload']['name']);
+            $category = $_POST['upload_list'];
             for($i=0;$i<$countfiles;$i++) {
                 $filename = $_FILES['textToUpload']['name'][$i];
-                move_uploaded_file($_FILES['textToUpload']['tmp_name'][$i], $target_dir.$filename);
+                move_uploaded_file($_FILES['textToUpload']['tmp_name'][$i], $target_dir.$category."/".$filename);
 
                     $filetype = pathinfo($filename)['extension'];
-                    $sql = $conn->prepare("INSERT INTO search_titles (title, filetype) VALUES (:ffilename, :filetype)");
+                    $sql = $conn->prepare("INSERT INTO search_titles (title, filetype, category) VALUES (:ffilename, :filetype, :category)");
                     $sql->bindParam(":ffilename", $filename);
                     $sql->bindParam(":filetype", $filetype);
+                    $sql->bindParam(":category", $category);
                     $sql->execute();
                     echo "Success";
                 }

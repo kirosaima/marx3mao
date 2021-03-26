@@ -9,9 +9,15 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $conn = new PDO("mysql:host=$servername;dbname=$database", $username, $password); // build new connection object
         // set PDO error mode to exception
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        
         $target_dir = "articles/";
         $file = $_POST['delete_list'];
-        if (!unlink($target_dir.$file)) {
+        $sql = $conn->prepare("SELECT category FROM search_titles WHERE title = :ffile");
+        $sql->bindParam(":ffile", $file);
+        $sql->execute();
+        $categories = $sql->fetchAll();
+        foreach ($categories as $category) { $cat = $category['category'];}
+        if (!unlink($target_dir.$cat."/".$file)) {
             echo "File cannot be deleted due to an error.";
         }
         else {

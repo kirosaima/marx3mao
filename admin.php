@@ -27,14 +27,29 @@ catch(PDOException $e)
     <title>Crimson Path Admin Area</title>
 </head>
 <body>
-    <h1>Welcome to Crimson Path admin area</h1>
-    <a href="index.php">Home</a><br>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae rem atque doloremque explicabo totam debitis voluptatibus velit. Et atque corporis totam? Illum culpa consequatur non aliquam neque quidem harum praesentium!</p>
-    <br>
+<div class="navbar">
+        <ul>
+            <a href="index.php">HOME</a>
+            <a href="textlist.php">TEXTS</a>
+            <a href="news.php">NEWS</a>
+            <a href="contact.php">CONTACT</a>
+            <a href="about.html">ABOUT</a></li>    
+            <form action="search.php" method="post">
+                <input type="text" name="search_value" id="search_value">
+                <input type="submit" value="" style="background:url('images/Search-Icon.png');background-size:cover;border:none;color: transparent;">
+            </form>
+                
+        </ul>
+    </div>
+    <div class="main-body">
+    <h2>Welcome to Crimson Path admin area</h2>
     <hr>
     <form action="upload.php" method="post" enctype="multipart/form-data">
         Select files to upload:
         <input type="file" name="textToUpload[]" id="textToUpload" multiple>
+        <select name="upload_list" id="upload_list">
+            <option value="politics">Politics</option>
+        </select>
         <br>
         <input type="submit" value="Upload Text and PDF" name="submit">
     </form>
@@ -47,6 +62,7 @@ catch(PDOException $e)
         </select>
         <input type="submit" value="Choose item to delete" name="deleteButton">
     </form>
+            </div>
     <hr>
     <a href="md-to-html.php">Markdown to HTML</a>
     <a href="logout.php">Logout</a>
