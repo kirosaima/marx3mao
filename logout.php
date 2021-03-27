@@ -16,5 +16,7 @@ session_start();
 $_SESSION['loggedIn'] = 'nil';
 echo "Logged out";
 ?>
+<hr>
+2021
 </body>
 </html>

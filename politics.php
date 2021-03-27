@@ -8,7 +8,7 @@
         $category = "politics";
 
         // search for user in users table
-        $sql = $conn->prepare("SELECT title FROM search_titles WHERE category = :category");
+        $sql = $conn->prepare("SELECT title FROM search_titles WHERE category = :category AND filetype = 'html'");
         $sql->bindParam(":category", $category);
 
         $sql->execute(); // execute the statement
@@ -54,5 +54,7 @@
     <?php endforeach; ?>
     </ul>
 </div>
+<hr>
+2021
 </body>
 </html>

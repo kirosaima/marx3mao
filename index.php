@@ -27,11 +27,9 @@
 
     </div>
     <div class="main-body-home">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima non iusto perferendis hic! Non doloremque magnam cumque eius quia aliquam culpa veniam accusantium error. Voluptatem delectus similique a fugit dolore.</p>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus hic dolorem porro quos nihil voluptas quaerat quae recusandae, sequi, sit unde inventore aspernatur numquam iure molestias accusamus rem, consequatur repellat.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, aperiam molestiae consequatur distinctio earum in maiores non, nam quasi, quam doloremque optio quod delectus praesentium dicta. Delectus accusantium numquam sed?</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi exercitationem repudiandae voluptatem quia obcaecati alias debitis laboriosam at officiis, beatae, voluptate cupiditate qui illo perspiciatis? Officiis ipsa iusto excepturi et.</p>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe reiciendis a distinctio necessitatibus doloribus esse fugit cupiditate iure soluta, quod debitis est, aut deserunt quo beatae odio accusamus voluptate perspiciatis.</p>
+        <p>"Communism is for us not a state of affairs which is to be established, an ideal to which reality [will] have to adjust itself. We call communism the real movement which abolishes the present state of things. The conditions of this movement result from the premises now in existence." <em>Karl Marx - 'The German Ideology' (1845)</em></p>
+        <p>"Thousands upon thousands of martyrs have heroically laid down their lives for the people; let us hold their banner high and march ahead along the path crimson with their blood!" <em>Mao Zedong - 'On Coalition Government' (April 24, 1945), Selected Works, Vol. III, p. 264.</em></p>
+        <p>"Struggle exposes us to the simple form of failure (the assault did not succeed), while victory exposes us to its most redoubtable form: we notice that we have won in vain, and that our victory paves the way for repetition and restoration. That, for the state, a revolution is never anything more than an intervening period. Hence the sacrificial temptations of nothingness. For a politics of emancipation, the enemy that is to be feared most is not repression at the hands of the established order. It is the interiority of nihilism, and the unbounded cruelty that can come with its emptiness." <em>Alain Badiou - 'The Communist Hypothesis' (August 1, 2010), p. 32</em></p>
     </div>
     <hr>
     2021

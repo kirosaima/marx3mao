@@ -25,6 +25,13 @@ hr {
     width: 70%;
     color: #3a3a3a;
 }
+.main-body-home h1 {
+    text-align: right;
+    color: black;
+    border-bottom: 5px solid #ff4343;
+    display:inline;
+    margin-left: 70%;
+}
   
 .main-body {
     margin-top: 5%;
@@ -39,6 +46,7 @@ hr {
     border-bottom: 5px solid #ff4343;
     display:inline;
     margin-left: 70%;
+    margin-right: -10%;
 }
 .main-body a {
     text-decoration: none;
