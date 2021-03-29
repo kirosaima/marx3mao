@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;500&display=swap');
 :root {
     --select-border: #777;
     --select-focus: blue;
@@ -11,6 +10,7 @@
 body {
     font-family: 'OswaldStencil', sans-serif;
     background-color: #dbdbdb;
+    line-height: 25px;
 }
 
 hr {
@@ -19,7 +19,7 @@ hr {
     border: none;
 }
 .main-body-home {
-    margin-top: 31%;
+    margin-top: 32%;
     margin-left: auto;
     margin-right: auto;
     width: 70%;
@@ -34,11 +34,14 @@ hr {
 }
   
 .main-body {
-    margin-top: 5%;
+    margin-top: 7%;
     margin-left: auto;
     margin-right: auto;
     width: 70%;
     color: #3a3a3a;
+}
+.main-body p {
+    font-family: Arial, sans-serif;
 }
 .main-body h1 {
     text-align: right;
@@ -76,19 +79,21 @@ hr {
 
 #header {
     position: absolute;
-    top: 3px;
+    top: 0;
     left: 0px;
-    max-width: 50%;
+    width: 100%;
     pointer-events: none;
 }
-#title {
-    position: absolute;
-    top: 7.5%;
-    right: 0px;
-    max-width: 50%;
-}
-
+.navbar .icon {
+    display: none;
+  }
 
 .navbar form {
     float: right;
 }
+
+@media screen and (max-width: 1080px) {
+    #header {
+        top: 4%;
+    }
+  }

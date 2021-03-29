@@ -5,7 +5,7 @@
         // set PDO error mode to exception
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        $category = "politics";
+        $category = "economics";
 
         // search for user in users table
         $sql = $conn->prepare("SELECT title FROM search_titles WHERE category = :category AND filetype = 'html'");
@@ -29,7 +29,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
-    <title>Politics</title>
+    <title>Economics</title>
 </head>
 <body>
 <div class="navbar">

@@ -5,25 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script.js"></script>
     <title>The Path of Crimson</title>
 </head>
 <body>
-    <div class="navbar">
-        <ul>
+    <div class="navbar" id="navbar">
             <a href="index.php">HOME</a>
             <a href="textlist.php">TEXTS</a>
             <a href="news.php">NEWS</a>
             <a href="contact.php">CONTACT</a>
-            <a href="about.html">ABOUT</a></li>    
+            <a href="about.html">ABOUT</a>    
             <form action="search.php" method="post">
                 <input type="text" name="search_value" id="search_value">
                 <input type="submit" value="" style="background:url('images/Search-Icon.png');background-size:cover;border:none;color: transparent;">
             </form>
-                
-        </ul>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
     </div>
     <img src="images/Header-Image-on-Transparent.png" alt="header" id="header"></img>
-    <img src="images/The-Path-of-Crimson-on-Red.jpg" alt="title" id="title"></img>
 
     </div>
     <div class="main-body-home">

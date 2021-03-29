@@ -24,11 +24,11 @@ catch(PDOException $e)
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <title>Crimson Path Admin Area</title>
 </head>
 <body>
 <div class="navbar">
-        <ul>
             <a href="index.php">HOME</a>
             <a href="textlist.php">TEXTS</a>
             <a href="news.php">NEWS</a>
@@ -38,8 +38,6 @@ catch(PDOException $e)
                 <input type="text" name="search_value" id="search_value">
                 <input type="submit" value="" style="background:url('images/Search-Icon.png');background-size:cover;border:none;color: transparent;">
             </form>
-                
-        </ul>
     </div>
     <div class="main-body">
     <h2>Welcome to Crimson Path admin area</h2>
@@ -49,6 +47,7 @@ catch(PDOException $e)
         <input type="file" name="textToUpload[]" id="textToUpload" multiple>
         <select name="upload_list" id="upload_list">
             <option value="politics">Politics</option>
+            <option value="economics">Economics</option>
         </select>
         <br>
         <input type="submit" value="Upload Text and PDF" name="submit">
