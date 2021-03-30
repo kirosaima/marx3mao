@@ -24,9 +24,7 @@
     <i class="fa fa-bars"></i>
   </a>
     </div>
-    <img src="images/Header-Image-on-Transparent.png" alt="header" id="header"></img>
-
-    </div>
+    <img src="images/Header-Image-on-Transparent.png" alt="header" id="header">
     <div class="main-body-home">
         <p>"Communism is for us not a state of affairs which is to be established, an ideal to which reality [will] have to adjust itself. We call communism the real movement which abolishes the present state of things. The conditions of this movement result from the premises now in existence." <em>Karl Marx - 'The German Ideology' (1845)</em></p>
         <p>"Thousands upon thousands of martyrs have heroically laid down their lives for the people; let us hold their banner high and march ahead along the path crimson with their blood!" <em>Mao Zedong - 'On Coalition Government' (April 24, 1945), Selected Works, Vol. III, p. 264.</em></p>

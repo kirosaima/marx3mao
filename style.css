@@ -97,3 +97,6 @@ hr {
         top: 4%;
     }
   }
+.main-body #gpcr {
+    max-width: 30%;
+}
