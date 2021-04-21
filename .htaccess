@@ -1,0 +1,6 @@
+AuthUserFile ../.htpasswd
+AuthName "Admin"
+AuthType Basic
+<Limit GET POST>
+require user admin
+</Limit>

@@ -41,7 +41,7 @@ session_start();
                 }
 
                 if($_SESSION["loggedIn"] == "admin") { // check if we have results by seeing if there are rows
-                    header("Location: https://bh55zl.uoswebspace.co.uk/crimsonpath/admin.php");
+                    header("Location: http://pathofcrimson.com/admin.php");
                     exit();
                 }
                 else

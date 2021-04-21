@@ -1,9 +1,5 @@
 <?php
 include "dbconnect.php";
-session_start(); // allow session variables
-if ($_SESSION["loggedIn"] != "admin") {
-    header("Location: login_form.html"); // send them to the form to login
-}
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
     try {
         $conn = new PDO("mysql:host=$servername;dbname=$database", $username, $password); // build new connection object

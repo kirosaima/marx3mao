@@ -1,0 +1,7 @@
+AuthType Basic
+AuthName "restricted area"
+AuthUserFile /data/6/5/118/66/5770718/user/6876009/htdocs/admin/.access.pwd
+AuthPam_Enabled off
+
+require valid-user
+Options -Indexes

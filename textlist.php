@@ -24,7 +24,9 @@
         <h1>Categories</h1>
         <ul><li><a href="politics.php">POLITICS</a></li>
         <li><a href="ecology.php">ECOLOGY</a></li>
-        <li><a href="economics.php">ECONOMICS</a></li></ul>
+        <li><a href="economics.php">ECONOMICS</a></li>
+	<li><a href="philosophy.php">PHILOSOPHY</a></li>
+	</ul>
 </div>
     <hr>
     2021

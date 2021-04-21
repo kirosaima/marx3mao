@@ -5,7 +5,7 @@
         // set PDO error mode to exception
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-        $category = "economics";
+        $category = "philosophy";
 
         // search for user in users table
         $sql = $conn->prepare("SELECT title FROM search_titles WHERE category = :category AND filetype = 'html'");
@@ -29,7 +29,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
-    <title>Economics</title>
+    <title>Philosophy</title>
 </head>
 <body>
 <div class="navbar">
@@ -45,7 +45,7 @@
     </div>
     
 <div class="main-body">
-    <h1>Economics</h1>
+    <h1>Philosophy</h1>
     <ul>
     <?php foreach($titles as $title): ?>
         <li><a href="articles/<?=$category?>/<?= $title['title']; ?>"><?= pathinfo($title['title'])['filename']; ?></a></li>
